@@ -1,0 +1,5 @@
+# musl-tools on Ubuntu only provides x86_64 musl, not aarch64-musl.
+# gcc-aarch64-linux-gnu acts as the cross-linker; Rust's self-contained
+# toolchain provides the musl libc for aarch64.
+[target.aarch64-unknown-linux-musl]
+linker = "aarch64-linux-gnu-gcc"

@@ -1,0 +1,11 @@
+# Rust
+target/
+
+# CDK
+cdk/node_modules
+cdk/cdk.out/
+cdk/dist/
+
+# General
+.env
+*.zip

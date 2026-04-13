@@ -1,0 +1,3 @@
+[workspace]
+resolver = "3"
+members = [ "lambdas/archival", "lambdas/reader", "lambdas/writer","publisher"]
