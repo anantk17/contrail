@@ -35,15 +35,6 @@ jobs:
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
           restore-keys: ${{ runner.os }}-cargo-
 
-      # musl-tools on Ubuntu only covers x86_64 musl, not aarch64.
-      # gcc-aarch64-linux-gnu serves as the cross-linker; Rust's self-contained
-      # toolchain provides the musl libc for aarch64.
-      - name: Configure cross linker
-        run: |
-          mkdir -p .cargo
-          echo '[target.aarch64-unknown-linux-musl]' >> .cargo/config.toml
-          echo 'linker = "aarch64-linux-gnu-gcc"' >> .cargo/config.toml
-
       - name: Build Lambda crates
         # Build each Lambda separately to avoid binary name collision (all produce 'bootstrap')
         run: |
