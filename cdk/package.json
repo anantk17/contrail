@@ -1,0 +1,27 @@
+{
+  "name": "contrail-cdk",
+  "version": "0.1.0",
+  "bin": {
+    "contrail-cdk": "bin/app.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cdk",
+    "lint": "eslint 'bin/**/*.ts' 'lib/**/*.ts'"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "22.x",
+    "@typescript-eslint/eslint-plugin": "^8.58.1",
+    "@typescript-eslint/parser": "^8.58.1",
+    "aws-cdk": "2.x",
+    "eslint": "^10.2.0",
+    "typescript": "~5.7",
+    "typescript-eslint": "^8.58.1"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.x",
+    "constructs": "^10.0.0"
+  }
+}
